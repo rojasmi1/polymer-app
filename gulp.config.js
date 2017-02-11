@@ -11,7 +11,7 @@ module.exports = ()=>{
     build:'./dist/',
     client: client,
     images:client + 'images/**/*.*',
-    html: client + 'src/*.html',
+    polymerElements: client + 'src/*.html',
     index:client + 'index.html',
     root:root,
 

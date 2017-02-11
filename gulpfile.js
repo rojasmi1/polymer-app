@@ -9,7 +9,7 @@ let port = process.env.PORT || config.defaultPort;
 
 gulp.task('vulcanize',()=>{
   console.log('Vulcanizing Files');
-  return gulp.src(config.html)
+  return gulp.src(config.polymerElements)
   .pipe(vulcanize())
   .pipe(gulp.dest(config.build));
 });
