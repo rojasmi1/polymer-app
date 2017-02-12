@@ -15,6 +15,6 @@
     "lint": "eslint . --ext js,html --ignore-path .gitignore",
     "test": "npm run lint && polymer test",
     "build": "npm install polymer-cli -g && polymer build",
-    "postinstall": "bower install && npm run build && node serve.js"
+    "postinstall": "./node_modules/bower/bin/bower install && npm run build && node serve.js"
   }
 }
