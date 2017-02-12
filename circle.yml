@@ -1,0 +1,32 @@
+## Customize the test machine
+machine:
+
+
+  # Add some environment variables
+  environment:
+    CIRCLE_ENV: test
+
+## Customize checkout
+# checkout:
+#   post:
+#     - git submodule sync
+#     - git submodule update --init # use submodules
+
+## Customize dependencies
+dependencies:
+  pre:
+    - npm install -g bower polymer-cli # polymer-cli globally
+    - bower install
+
+
+## Customize test commands
+test:
+  override:
+    - xvfb-run npm test
+
+## Customize deployment commands
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: my-polymer-app
