@@ -2,6 +2,7 @@
   "name": "polymer-starter-kit",
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "bower": "^1.8.0",
     "del": "^2.2.2",
     "eslint": "^3.12.0",
     "eslint-config-google": "^0.7.1",
@@ -12,6 +13,8 @@
   },
   "scripts": {
     "lint": "eslint . --ext js,html --ignore-path .gitignore",
-    "test": "npm run lint && polymer test"
+    "test": "npm run lint && polymer test",
+    "build": "npm install polymer-cli -g && polymer build",
+    "postinstall": "bower install && npm run build && node serve.js"
   }
 }
