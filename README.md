@@ -1,26 +1,17 @@
-# Polymer App Toolbox - Starter Kit
+# Personal website using polymer
+## Based on [Polymer App Toolbox - Starter Kit](https://github.com/PolymerElements/polymer-starter-kit)
 
-[![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
+This is the base project for creating my personal website, just for the sake of learning how to work with Polymer. Feel free to use this project as a reference in case you want to use CircleCI for continuous integration and Heroku for deployment, the circle.yml file contains some basic configuration to run the tests correctly and the npm scripts required for deploying the application in Heroku are already tested.
 
-This template is a starting point for building apps using a drawer-based
-layout. The layout is provided by `app-layout` elements.
+Development instance of the application running: https://my-polymer-app.herokuapp.com/ 
 
-This template, along with the `polymer-cli` toolchain, also demonstrates use
-of the "PRPL pattern" This pattern allows fast first delivery and interaction with
-the content at the initial route requested by the user, along with fast subsequent
-navigation by pre-caching the remaining components required by the app and
-progressively loading them on-demand as the user navigates through the app.
+### What technologies are used in this project?
+- Polymer
+- Webcomponentjs as the polyfill for Custom Elements
+- Vulcanize (out-of-the-box from polymer-cli)
+- CircleCI
+- Heroku (not mandatory)
 
-The PRPL pattern, in a nutshell:
-
-* **Push** components required for the initial route
-* **Render** initial route ASAP
-* **Pre-cache** components for remaining routes
-* **Lazy-load** and progressively upgrade next routes on-demand
-
-### Migrating from Polymer Starter Kit v1?
-
-[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html)
 
 ### Setup
 
@@ -31,11 +22,6 @@ First, install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
 
     npm install -g polymer-cli
 
-##### Initialize project from template
-
-    mkdir my-app
-    cd my-app
-    polymer init starter-kit
 
 ### Start the development server
 
