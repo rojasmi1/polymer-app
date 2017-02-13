@@ -23,7 +23,6 @@ dependencies:
 test:
   override:
     - npm run test
-        parallel: true
 
 ## Customize deployment commands
 deployment:
