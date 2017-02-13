@@ -3,7 +3,7 @@
 
 This is the base project for creating my personal website, just for the sake of learning how to work with Polymer. Feel free to use this project as a reference in case you want to use CircleCI for continuous integration and Heroku for deployment, the circle.yml file contains some basic configuration to run the tests correctly and the npm scripts required for deploying the application in Heroku are already tested.
 
-Development instance of the application running: https://my-polymer-app.herokuapp.com/ 
+Development instance of the application running: https://my-polymer-app.herokuapp.com/
 
 ### What technologies are used in this project?
 - Polymer
@@ -22,6 +22,9 @@ First, install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
 
     npm install -g polymer-cli
 
+ For serving the app in dev mode watching for changes in the source you need browser-sync
+
+    npm install -g browser-sync
 
 ### Start the development server
 
