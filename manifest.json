@@ -1,10 +1,10 @@
 {
-  "name": "My App",
-  "short_name": "My App",
+  "name": "Michael Rojas - Personal Website",
+  "short_name": "MRP",
   "start_url": "/?homescreen=1",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#2181b9",
+  "background_color": "#2181b9",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
