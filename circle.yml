@@ -2,9 +2,9 @@
 machine:
 
 
-  # Add some environment variables
-  environment:
-    CIRCLE_ENV: test
+# Add some environment variables
+environment:
+  CIRCLE_ENV: test
 
 ## Customize checkout
 # checkout:
@@ -23,7 +23,7 @@ dependencies:
 test:
   override:
     - npm run test
-      parallel: true
+        parallel: true
 
 ## Customize deployment commands
 deployment:
