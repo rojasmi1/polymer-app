@@ -25,14 +25,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .circle {
         display: inline-block;
-        width: 64px;
-        height: 64px;
-        text-align: center;
         color: #555;
+        width: 200px;
+        height: 180px;
         border-radius: 50%;
-        background: #ddd;
-        font-size: 30px;
-        line-height: 64px;
+        border: 3px solid #39b2d6;
+        -webkit-transition: background 1s;
+        transition: background 1s;
+        background: url('/images/michael_rojas_black_and_white_portrait.jpg') center no-repeat;
+        background-size: 240px 200px;
+      }
+
+      .circle:hover {
+        background: url('/images/michael_rojas_portrait.jpg') center no-repeat;
+        background-size: 240px 200px;
       }
 
       h1 {
@@ -40,6 +46,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: #212121;
         font-size: 22px;
       }
+
+      @media screen and (max-width: 600px){
+        .circle{
+          width: 360px;
+          height: 330px;
+          background-size: 430px 400px;
+          margin: 0 auto;
+          display: block;
+        }
+        .circle:hover {
+          background-size: 430px 400px;
+        }
+      }
+
+      @media screen and (max-width: 480px){
+        .circle {
+          width: 250px;
+          height: 230px;
+          background-size: 350px 300px;
+        }
+        .circle:hover {
+          background-size: 350px 300px;
+        }
+      }
+
     </style>
   </template>
 </dom-module>
