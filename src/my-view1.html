@@ -19,13 +19,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         min-width: 340px;
         padding: 10px;
       }
+
+      #my-background{
+        display: inline-block;
+        width: 65%;
+        text-align: justify;
+        padding-left: 6em;
+      }
+
+      @media screen and (max-width: 1024px){
+        #my-background{
+          display: block;
+          width: 100%;
+          text-align: justify;
+          padding-left: 0;
+        }
+      }
     </style>
 
     <div class="card">
       <div id="portrait-picture" class="circle"></div>
-      <h1>My </h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <article id="my-background">
+        <h1>My background</h1>
+        <p>As a Software Developer, he has been involved in a wide range of projects including Legal Expenses Management systems for <strong>Banking Entities</strong>, <strong>JEE</strong> Based Applications that interact via <strong>REST APIs</strong>,
+          <strong>MS Office extensions</strong> (desktop and web) for tasks automation on the pharmaceutics industry, a Web Application for data analysis using
+          <strong>NodeJS</strong>, <strong>Mongo</strong> and <strong>AngularJS</strong>, and responsive email Development, among others.
+        </p>
+        <p>He has good <strong>team work</strong> and <strong>communication skills</strong>, and is always looking for improvement. Is a professional that enjoys <strong>learning</strong> new technologies, making him the perfect fit for projects that demand
+          being <strong>proactive</strong>, <strong>self-taught</strong> and with <strong>great attitude</strong> for tackling challenging problems.
+        </p>
+      </article>
     </div>
   </template>
 
