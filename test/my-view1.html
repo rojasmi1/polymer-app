@@ -37,9 +37,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           home = fixture('basic');
         });
 
-        test('Number in circle should be 1', function() {
-          var circle = Polymer.dom(home.root).querySelector('.circle');
-          assert.equal(circle.textContent, '1');
+        test('Class name for the portrait should contain \'circle\'', function() {
+          var circle = Polymer.dom(home.root).querySelector('#portrait-picture');
+          assert.isTrue(circle.className.indexOf('circle')>=0);
         });
       });
     </script>
