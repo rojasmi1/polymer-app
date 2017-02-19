@@ -29,9 +29,10 @@ First, install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
 ### Start the development server
 
 This command serves the app at `http://localhost:8080` and provides basic URL
-routing for the app:
+routing for the app. Then browser-sync is started using proxy configuration to watch for changes in the code
+and make the app available at `http://localhots:3000`:
 
-    polymer serve --open
+    npm run start:dev
 
 ### Build
 
