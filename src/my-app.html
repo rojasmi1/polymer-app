@@ -27,7 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         --app-primary-color: #2181b9;
-        --app-secondary-color: #B26600;
+        --app-secondary-color: #da7d00;
 
         display: block;
       }
@@ -53,8 +53,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .drawer-list a.iron-selected {
-        color: black;
+        color: #2181b9;
         font-weight: bold;
+      }
+
+      #drawer{
+        --app-drawer-width:140px;
       }
     </style>
 
@@ -79,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
 
-        <app-header condenses reveals effects="waterfall">
+        <app-header condenses reveals shadow="true" effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
             <div main-title>Michael Rojas Pereira</div>
@@ -96,7 +100,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-view3 name="view3"></my-view3>
           <my-view404 name="view404"></my-view404>
         </iron-pages>
+
       </app-header-layout>
+
     </app-drawer-layout>
   </template>
 
