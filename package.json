@@ -17,7 +17,7 @@
     "build": "npm install polymer-cli -g && polymer build",
     "postinstall": "bower install && npm run build",
     "start": "node serve.js",
-    "start:dev": "polymer serve | browser-sync start --proxy localhost:8080 --files \"src/*.html,images/*.*\""
+    "start:dev": "polymer serve | browser-sync start --proxy localhost:8080 --files \"src/**/*.html,images/**/*.*\""
   },
   "dependencies": {
     "express": "^4.14.1"

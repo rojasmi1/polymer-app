@@ -1,0 +1,45 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="mrp-footer">
+  <template>
+    <style>
+      :host {
+        display: block;
+        margin: 10px 35px;
+      }
+      .copyright{
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+        padding: 5px 20px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        background-color: #da7d00;
+      }
+
+      @media screen and (max-width:480px) {
+        .copyright{
+          height: auto;
+          line-height: 40px;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    </style>
+
+    <footer>
+      <div class="copyright">
+        [[copyright]]
+      </div>
+    </footer>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mrp-footer',
+    });
+  </script>
+</dom-module>
