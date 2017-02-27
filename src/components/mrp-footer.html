@@ -4,41 +4,87 @@
   <template>
     <style>
       :host {
-        display: block;
         margin: 0;
+        min-height: 50px;
       }
-      .copyright{
+
+      p{
+        margin: 0;
+        padding: 0;
+      }
+
+      #innerWrapper{
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -o-border-radius: 5px;
         -ms-border-radius: 5px;
         padding: 5px 20px;
-        height: 50px;
         line-height: 50px;
         font-size: 16px;
         background-color: #da7d00;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .copyright,.social-icons{
+        display: flex;
+        flex-direction: row;
+      }
+
+      .social-icons{
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 0 5%;
+      }
+
+      .copyright{
+        width: 70%;
+        padding: 0 5%;
+      }
+
+      .social-icon{
+        width: 40px;
+        height: auto;
+        padding-top: 0.6em;
+      }
+
+      a > iron-icon{
+        color: #000000;
       }
 
       @media screen and (max-width:480px) {
-        .copyright{
+        #innerWrapper{
           line-height: 40px;
           font-size: 12px;
           text-align: center;
         }
+
       }
 
-      @media screen and (max-width: 1024px){
-        .copyright{
-          height: 100%;
+      @media screen and (max-width:1024px) {
+        .copyright, .social-icons{
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          padding: 0 1em;
         }
       }
+
     </style>
 
     <footer>
-      <div class="copyright">
-        [[copyright]]
-      </div>
+    <div id="innerWrapper">
+      <section class="copyright">
+        <p>[[copyright]]</p>
+      </section>
+      <section class="social-icons">
+        <a href="https://github.com/rojasmi1" target="_blank"><iron-icon class="social-icon" icon="my-icons:github"></iron-icon></a>
+        <a href="https://www.facebook.com/MichaelRojasP.14" target="_blank"><iron-icon class="social-icon" icon="my-icons:facebook"></iron-icon></a>
+        <a href="https://www.linkedin.com/in/michael-rojas-pereira" target="_blank"><iron-icon class="social-icon" icon="my-icons:linkedin"></iron-icon></a>
+      </section>
+    </div>
     </footer>
   </template>
 
