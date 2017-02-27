@@ -91,9 +91,12 @@
   <script>
     Polymer({
       is: 'mrp-footer',
-      properties:{
-        copyright:String
-      }
+        properties: {
+          copyright: {
+            type: String,
+            reflectToAttribute: true,
+          },
+        },
     });
   </script>
 </dom-module>
