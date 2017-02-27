@@ -5,7 +5,7 @@
     <style>
       :host {
         display: block;
-        margin: 10px 35px;
+        margin: 0;
       }
       .copyright{
         border-radius: 5px;
@@ -22,10 +22,15 @@
 
       @media screen and (max-width:480px) {
         .copyright{
-          height: auto;
           line-height: 40px;
           font-size: 12px;
           text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 1024px){
+        .copyright{
+          height: 100%;
         }
       }
     </style>
@@ -40,6 +45,9 @@
   <script>
     Polymer({
       is: 'mrp-footer',
+      properties:{
+        copyright:String
+      }
     });
   </script>
 </dom-module>
