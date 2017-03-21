@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-interests">
+  <template>
+    <style>
+      :host {
+      display: block;
+      }
+
+      .items{
+        position: relative;
+      }
+
+      .item{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #da7d00;
+        width: 15em;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      @media screen and (max-width:480px) {
+      }
+
+      @media screen and (max-width:1024px) {
+      }
+    </style>
+
+    <section id="innerWrapper">
+      <h3>[[title]]</h3>
+      <div class="items">
+        <template is="dom-repeat" items="[[interests]]">
+          <span class="item">[[item.name]]</span>
+        </template>
+      </div>
+    </section>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-interests',
+        properties: {
+          interests: {
+            type: Array,
+          },
+          title:String,
+        },
+    });
+  </script>
+</dom-module>
