@@ -5,7 +5,7 @@
     <style>
       :host {
         margin: 0;
-        min-height: 50px;
+        min-height: 60px;
       }
 
       p{
@@ -20,7 +20,7 @@
         -o-border-radius: 5px;
         -ms-border-radius: 5px;
         padding: 5px 20px;
-        line-height: 50px;
+        line-height: 60px;
         font-size: 16px;
         background-color: #da7d00;
         display: flex;
@@ -48,6 +48,14 @@
         width: 40px;
         height: auto;
         padding-top: 0.6em;
+        transition-timing-function: cubic-bezier(0.15, 0.85, 0.91, -0.48);
+        transition: all 0.5s;
+      }
+
+      .social-icon:hover{
+        transform: rotate(20deg);
+        width: 45px;
+        color: #ffffff;
       }
 
       a > iron-icon{
@@ -56,7 +64,7 @@
 
       @media screen and (max-width:480px) {
         #innerWrapper{
-          line-height: 40px;
+          line-height: 60px;
           font-size: 12px;
           text-align: center;
         }

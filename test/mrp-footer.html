@@ -14,16 +14,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>Tests</title>
+    <title>my-view1</title>
 
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../bower_components/web-component-tester/browser.js"></script>
+
+    <!-- Import the element to test -->
+    <link rel="import" href="../src/components/mrp-footer.html">
   </head>
   <body>
+    <test-fixture id="basic">
+      <template>
+        <mrp-footer copyright="© Michael Rojas Pereira. All rights reserved."></mrp-footer>
+      </template>
+    </test-fixture>
+
     <script>
-      WCT.loadSuites([
-        'my-view1.html?dom=shadow',
-        'mrp-footer.html?dom=shadow',
-      ]);
+      suite('mrp-footer tests', function() {
+        var home;
+
+        setup(function() {
+          home = fixture('basic');
+        });
+
+        test('Copyright text should contain \'Michael Rojas Pereira\'', function() {
+          var copyright = Polymer.dom(home.root).querySelector('.copyright p');
+          assert.isTrue(copyright.textContent.indexOf('Michael Rojas Pereira')>=0);
+        });
+      });
     </script>
   </body>
 </html>
