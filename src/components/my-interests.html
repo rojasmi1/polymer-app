@@ -7,35 +7,26 @@
       display: block;
       }
 
-      .items{
-        position: relative;
-      }
-
       .item{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        display: inline-block;
         background-color: #da7d00;
         width: 15em;
         color: #ffffff;
         font-weight: bold;
         border-radius: 5px;
+        transition: all 0.5s;
       }
 
-      @media screen and (max-width:480px) {
+      .animate-item{
+        transform: scale(1.2);
       }
 
-      @media screen and (max-width:1024px) {
-      }
     </style>
 
     <section id="innerWrapper">
       <h3>[[title]]</h3>
       <div class="items">
-        <template is="dom-repeat" items="[[interests]]">
-          <span class="item">[[item.name]]</span>
-        </template>
+          <span class="item">[[selectedItem.name]]</span>
       </div>
     </section>
   </template>
@@ -48,7 +39,37 @@
             type: Array,
           },
           title:String,
+          interval:{
+            type:Number,
+            value:3000,
+          }
         },
+        ready: function(){
+        this.selectedIndex = 0;
+        this.selectedItem = this.interests[0];
+
+        //Change item every N seconds
+        setInterval(switchItem.bind(this),this.interval);
+
+        function switchItem(){
+          //if last item then reset
+          if(this.selectedIndex===this.interests.length-1){
+          this.selectedIndex = 0;
+        }else{ //otherwise continue switching
+          this.selectedIndex++;
+          }
+          //Set selected item
+          this.selectedItem = this.interests[this.selectedIndex];
+
+          //Animate
+          var item = this.$$('.item');
+          item.classList.toggle('animate-item');
+          setTimeout(function(){
+          item.classList.toggle('animate-item');
+          },500);
+
+        }
+      },
     });
   </script>
 </dom-module>
