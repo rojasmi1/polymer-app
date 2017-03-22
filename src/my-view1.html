@@ -29,6 +29,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: justify;
         padding-left: 6em;
       }
+      
+      #my-background::before,#my-background::after{
+      content: "";
+      height: 1px;
+      background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(147,147,147,1) 100%);
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      }
 
       #about-me{
         text-align: center;
