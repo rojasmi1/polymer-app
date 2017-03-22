@@ -50,11 +50,14 @@
         this.selectedItem = this.interests[0];
 
         // Change item every N seconds
-        setInterval(switchItem.bind(this),this.interval);
+        setInterval(switchItem.bind(this), this.interval);
 
+        /**
+         * Switches to next item.
+         */
         function switchItem() {
           // if last item then reset
-          if(this.selectedIndex===this.interests.length-1){
+          if(this.selectedIndex===this.interests.length-1) {
           this.selectedIndex = 0;
         }else{ // otherwise continue switching
           this.selectedIndex++;
