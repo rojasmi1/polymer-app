@@ -38,36 +38,36 @@
           interests: {
             type: Array,
           },
-          title:String,
-          interval:{
-            type:Number,
-            value:3000,
-          }
+          title: String,
+          interval: {
+            type: Number,
+            value: 3000,
+          },
         },
-        ready: function(){
+
+        ready: function() {
         this.selectedIndex = 0;
         this.selectedItem = this.interests[0];
 
-        //Change item every N seconds
+        // Change item every N seconds
         setInterval(switchItem.bind(this),this.interval);
 
-        function switchItem(){
-          //if last item then reset
+        function switchItem() {
+          // if last item then reset
           if(this.selectedIndex===this.interests.length-1){
           this.selectedIndex = 0;
-        }else{ //otherwise continue switching
+        }else{ // otherwise continue switching
           this.selectedIndex++;
           }
-          //Set selected item
+          // Set selected item
           this.selectedItem = this.interests[this.selectedIndex];
 
-          //Animate
+          // Animate
           var item = this.$$('.item');
           item.classList.toggle('animate-item');
-          setTimeout(function(){
+          setTimeout(function() {
           item.classList.toggle('animate-item');
-          },500);
-
+          }, 500);
         }
       },
     });
