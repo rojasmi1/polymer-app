@@ -15,6 +15,8 @@ module.exports = {
     '/index.html',
     '/manifest.json',
     '/bower_components/webcomponentsjs/webcomponents-lite.min.js',
+    '/images/michael_rojas_black_and_white_portrait.jpg',
+    '/images/michael_rojas_portrait.jpg',
   ],
   navigateFallback: 'index.html',
 };
